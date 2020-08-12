@@ -48,6 +48,8 @@ RUN cd /tmp && npm install --loglevel=error
 
 COPY frontend .
 
+RUN npm update
+
 # Build Frontend
 RUN cp -a /tmp/node_modules . \
  && npm run test:coverage \
